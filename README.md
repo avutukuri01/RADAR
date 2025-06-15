@@ -28,7 +28,7 @@ containing visual misses.
 
 https://radiologistai.netlify.app/ 
 
-# Video Explaining the how to use our application in clinicle setting
+# Video Demonstration: How to Use Our Application in a Clinical Setting
 
 https://tally.so/r/w7EXgZ
 
