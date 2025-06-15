@@ -24,9 +24,17 @@ To support broader research and validation, we release a fully open-source
 web-based implementation of RADAR alongside a simulated error dataset
 containing visual misses.
 
-https://radiologistai.netlify.app/ [application]
+# Web Application Link
 
-https://tally.so/r/w7EXgZ[video of application]
+https://radiologistai.netlify.app/ 
 
+# Video Explaining the how to use our application in clinicle setting
 
-https://drive.google.com/drive/folders/19Px-uNFywK4DktVP89-A7LyLEO8OJovx?usp=sharing  [Error Dataset]
+https://tally.so/r/w7EXgZ
+
+# Some CXR images to try our application 
+
+These images are radomly selected from our synthetic error dataset.
+
+https://drive.google.com/drive/folders/19Px-uNFywK4DktVP89-A7LyLEO8OJovx?usp=sharing
+
