@@ -1,5 +1,8 @@
 [This repo is under developement.]
 # RADAR
+
+## Abstract
+
 Chest radiography remains a cornerstone of diagnostic imaging, yet interpretive errors—particularly perceptual errors, in which visible abnormalities
 are overlooked—continue to undermine diagnostic accuracy. These errors
 are frequent, persistent, and are not adequately addressed in current clinical
@@ -21,27 +24,27 @@ containing visual misses.
 
 ------------------------------------------------------------------------
 
-# Web Application
+## Web Application
 
 To try out our web application, click the link below and download some sample Chest X-Ray (CXR) images from the Google Drive link. We have also provided a link to view a video demonstration of the application, which showcases all its features, including real-time perceptual error detection and correction. 
 
-## Link
+### Link
 
 https://radiologistai.netlify.app/ 
 
-## Some CXR images to try our application 
+### Some CXR images to try our application 
 
 These images are randomly selected from our synthetic error dataset.
 
 https://drive.google.com/drive/folders/1990-n_1OiC9Wb-PXwQFLdsdQ_Hb5XbBk?usp=drive_link
 
-## Video Demonstration: How to Use Our Application in a Clinical Setting
+### Video Demonstration: How to Use Our Application in a Clinical Setting
 
 https://www.notion.so/RADAR-Radiologist-AI-Diagnostic-Assistance-and-Review-215ca80949e980c3bb79e1984955eba1?source=copy_link
 
 ------------------------------------------------------------------------
 
-# Synthetic Error Dataset
+## Synthetic Error Dataset
 
 https://drive.google.com/drive/folders/1pf7hHusFz4UE9Hy-Bq3tJPSSD9CxdEdF?usp=sharing
 
