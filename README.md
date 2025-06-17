@@ -34,7 +34,7 @@ https://radiologistai.netlify.app/
 
 ### Some CXR images to try our application 
 
-These images are randomly selected from our synthetic error dataset.
+These images are selected from our synthetic error dataset.
 
 https://drive.google.com/drive/folders/1990-n_1OiC9Wb-PXwQFLdsdQ_Hb5XbBk?usp=drive_link
 
