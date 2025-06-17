@@ -1,4 +1,4 @@
-[This repo is under developement.]
+[This repo is under development.]
 # RADAR (Radiologist-AI Diagnostic Assistance and Review)
 
 ## Abstract
