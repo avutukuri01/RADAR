@@ -1,5 +1,5 @@
 [This repo is under developement.]
-# RADAR
+# RADAR (Radiologist-AI Diagnostic Assistance and Review)
 
 ## Abstract
 
