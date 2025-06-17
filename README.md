@@ -26,7 +26,7 @@ containing visual misses.
 
 ## Web Application
 
-To try out our web application, click the link below and download some sample Chest X-Ray (CXR) images from the Google Drive link. We have also provided a link to view a video demonstration of the application, which showcases all its features, including real-time perceptual error detection and correction. 
+To try out our web application, click the link below and download some sample Chest X-Ray (CXR) images from the Google Drive link. Refer to our video demonstration of the application for information on its usage.  
 
 ### Link
 
