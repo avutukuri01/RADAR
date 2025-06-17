@@ -31,7 +31,7 @@ https://radiologistai.netlify.app/
 
 # Video Demonstration: How to Use Our Application in a Clinical Setting
 
-https://tally.so/r/w7EXgZ
+https://www.notion.so/RADAR-Radiologist-AI-Diagnostic-Assistance-and-Review-215ca80949e980c3bb79e1984955eba1?source=copy_link
 
 # Some CXR images to try our application 
 
