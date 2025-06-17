@@ -25,6 +25,8 @@ To support broader research and validation, we release a fully open-source
 web-based implementation of RADAR alongside a simulated error dataset
 containing visual misses.
 
+------------------------------------------------------------------------
+
 # Web Application Link
 
 https://radiologistai.netlify.app/ 
@@ -39,7 +41,7 @@ These images are randomly selected from our synthetic error dataset.
 
 https://drive.google.com/drive/folders/1990-n_1OiC9Wb-PXwQFLdsdQ_Hb5XbBk?usp=drive_link
 
-------------------------------------------------------------------------------------------
+------------------------------------------------------------------------
 
 # Synthetic Error Dataset
 
