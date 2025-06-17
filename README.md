@@ -29,19 +29,21 @@ containing visual misses.
 
 # Web Application
 
-## Web Application Link
+To try out our web application, click the link below and download some sample Chest X-Ray (CXR) images from the Google Drive link. We have also provided a link to view a video demonstration of the application, which showcases all its features, including real-time perceptual error detection and correction. 
+
+## Link
 
 https://radiologistai.netlify.app/ 
-
-## Video Demonstration: How to Use Our Application in a Clinical Setting
-
-https://www.notion.so/RADAR-Radiologist-AI-Diagnostic-Assistance-and-Review-215ca80949e980c3bb79e1984955eba1?source=copy_link
 
 ## Some CXR images to try our application 
 
 These images are randomly selected from our synthetic error dataset.
 
 https://drive.google.com/drive/folders/1990-n_1OiC9Wb-PXwQFLdsdQ_Hb5XbBk?usp=drive_link
+
+## Video Demonstration: How to Use Our Application in a Clinical Setting
+
+https://www.notion.so/RADAR-Radiologist-AI-Diagnostic-Assistance-and-Review-215ca80949e980c3bb79e1984955eba1?source=copy_link
 
 ------------------------------------------------------------------------
 
