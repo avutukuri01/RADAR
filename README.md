@@ -35,9 +35,9 @@ https://tally.so/r/w7EXgZ
 
 # Some CXR images to try our application 
 
-These images are radomly selected from our synthetic error dataset.
+These images are randomly selected from our synthetic error dataset.
 
-https://drive.google.com/drive/folders/19Px-uNFywK4DktVP89-A7LyLEO8OJovx?usp=sharing
+https://drive.google.com/drive/folders/1990-n_1OiC9Wb-PXwQFLdsdQ_Hb5XbBk?usp=drive_link
 
 # Synthetic Error Dataset
 
