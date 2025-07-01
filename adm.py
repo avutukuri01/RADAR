@@ -9,7 +9,7 @@ from ultralytics import YOLO
 
 # 1) Load model
 TARGET_SIZE = 1024
-model = YOLO("/Users/adhrith/Documents/best1.pt")
+model = YOLO("model.pt")
 
 
 # 2) Image‐reading
