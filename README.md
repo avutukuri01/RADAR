@@ -54,7 +54,7 @@ https://drive.google.com/drive/folders/1pf7hHusFz4UE9Hy-Bq3tJPSSD9CxdEdF?usp=sha
 
 ## Folder Structure
 
-- model - Download YOLO model weights
+- `model` - Download YOLO model weights
 - `preprocessing.ipynb` – Create training, validation, and testing sets for YOLO
 - `errordatasetcreation.ipynb` – Script to create simulated perceptual error dataset
 - `evaluationscript.ipynb` - Script to evaluate RADAR's ability to correct simulated perceptual error
