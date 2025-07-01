@@ -1,6 +1,5 @@
 import base64
 from io import BytesIO
-
 import numpy as np
 import pandas as pd
 import pydicom
@@ -84,3 +83,17 @@ def adm(image_file):
         "converted_image": converted_image,
         "predictions": preds_df.to_dict(orient="records"),
     }
+
+# Example Usage 
+if __name__ == "__main__":
+    class ImageFileWrapper:
+        def __init__(self, path: str):
+            self.path = path
+            self.filename = path
+        def read(self) -> bytes:
+            with open(self.path, "rb") as f:
+                return f.read()
+
+    # Replace with your actual image path, e.g. .dcm or .png/.jpg
+    example_file = ImageFileWrapper("path/to/example.png")
+    result = adm(example_file)
