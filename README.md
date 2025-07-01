@@ -55,5 +55,8 @@ https://drive.google.com/drive/folders/1pf7hHusFz4UE9Hy-Bq3tJPSSD9CxdEdF?usp=sha
 ## Folder Structure
 
 - `model/` – YOLO weights
-- `preprocessing/` – DICOM-to-PNG conversion, image resizing, and splitting data to create training, validation, and testing sets
-- `inference.py` – Main script to run predictions
+- `preprocessing.ipynb` – Create training, validation, and testing sets for YOLO
+- `errordatasetcreation.ipynb` – Script to create simulated perceptual error dataset
+- `evaluationscript.ipynb` - Script to evaluate RADAR's ability to correct simulated perceptual error
+- `adm.py` - Final script for abnormality detection module (ADM)
+- `ddm.py` - Final script for differential detection module (DDM)
