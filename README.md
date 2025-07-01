@@ -46,11 +46,14 @@ https://www.notion.so/RADAR-Radiologist-AI-Diagnostic-Assistance-and-Review-215c
 
 ## Synthetic Error Dataset
 
-This synthetic dataset replicates the perceptual misses RADAR is built to detect. It contains a single images/ folder and two accompanying CSV files—one with simulated radiologist annotations and another with simulated visual misses. Each CSV includes the columns image_id, rad_id, x_min, y_min, x_max, y_max, and label; every row represents an individual bounding box.
+This synthetic dataset replicates the perceptual misses that RADAR is built to detect. It contains a single images/ folder and two accompanying CSV files—one with simulated radiologist annotations and another with simulated visual misses. Each CSV includes the columns image_id, rad_id, x_min, y_min, x_max, y_max, and label; every row represents an individual bounding box.
 
 https://drive.google.com/drive/folders/1pf7hHusFz4UE9Hy-Bq3tJPSSD9CxdEdF?usp=sharing
 
 ------------------------------------------------------------------------
 
-## Usage
+## Folder Structure
 
+- `model/` – YOLO weights
+- `preprocessing/` – DICOM-to-PNG conversion, image resizing, and splitting data to create training, validation, and testing sets
+- `inference.py` – Main script to run predictions
