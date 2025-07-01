@@ -53,6 +53,16 @@ if __name__ == "__main__":
     import json
 
     # Load a JSON file or dictionary with the expected structure
+    """
+    {
+      "predictions": [...],
+      "annotations": [...],
+      "metadata": {
+        "originalWidth": ...,
+        "originalHeight": ...
+      }
+    }
+    """
     with open("input.json", "r") as f:
         payload = json.load(f)
 
