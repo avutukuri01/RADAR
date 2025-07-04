@@ -54,27 +54,32 @@ https://drive.google.com/drive/folders/1pf7hHusFz4UE9Hy-Bq3tJPSSD9CxdEdF?usp=sha
 
 ## Folder Structure
 
+```text
 RADAR/
 ├── README.md
 ├── requirements.txt
 │
-├── preprocessing.ipynb # ① build train/val/test + PNGs
-├── training.ipynb # ② train YOLO-v11x (skip if using pretrained model)
-├── errordatasetcreation.ipynb # ③ simulate visual-miss dataset
-├── evaluationscript.ipynb # ④ evaluate RADAR on the miss set
+├── preprocessing.ipynb          # ① build train/val/test + PNGs
+├── training.ipynb               # ② train YOLO-v11x (skip if using pretrained weights)
+├── errordatasetcreation.ipynb   # ③ simulate visual-miss dataset
+├── evaluationscript.ipynb       # ④ evaluate RADAR on the miss set
 │
-├── adm.py # Abnormality-Detection module
-└── ddm.py # Differential-Detection module
+├── adm.py                       # Abnormality-Detection module
+└── ddm.py                       # Differential-Detection module
+Files & folders created automatically by the notebooks
 
-*What appears automatically after you run the notebooks*
+Notebook	Auto-generated folders / files
+preprocessing.ipynb	images/, YOLODataset/train/…, YOLODataset/val/…, Testing1024/, training.csv, validation.csv, testing.csv, preprocessed_1024.csv
+training.ipynb	runs/train/YOLOExperiment/…
+errordatasetcreation.ipynb	Error Dataset/images/, visual_misses.csv, radiologist_annotations.csv
 
-| Notebook | Auto-generated folders / files |
-|----------|--------------------------------|
-| `preprocessing.ipynb` | `images/`, `YOLODataset/train/…`, `YOLODataset/val/…`, `Testing1024/`, `training.csv`, `validation.csv`, `testing.csv`, `preprocessed_1024.csv` |
-| `training.ipynb` | `runs/train/YOLOExperiment/…` |
-| `errordatasetcreation.ipynb` | `Error Dataset/images/`, `visual_misses.csv`, `radiologist_annotations.csv` |
+yaml
+Copy
+Edit
 
+---
 
+```markdown
 ## Usage
 
 ### ▶️ Full pipeline (reproduce everything)
@@ -87,26 +92,30 @@ pip install -r requirements.txt            # or use conda
 # 1) download VinDr-CXR from Kaggle and unzip so you have:
 #    RADAR/vinbigdata-chest-xray-abnormalities-detection/train/*.dicom
 
-jupyter lab                                 # launch from repo root
-Run the notebooks in this order
-
-preprocessing.ipynb
-
-training.ipynb (skip if you use pretrained model)
-
-errordatasetcreation.ipynb
-
-evaluationscript.ipynb
-
+jupyter lab                                # launch from repo root
+# Then run the notebooks in this order:
+#   1. preprocessing.ipynb
+#   2. training.ipynb         (skip if you use pretrained weights)
+#   3. errordatasetcreation.ipynb
+#   4. evaluationscript.ipynb
 ⚡ Quick-evaluate (skip heavy steps)
-
+bash
+Copy
+Edit
 git clone https://github.com/adhrithv/RADAR.git
 cd RADAR
 pip install -r requirements.txt
-Keep the provided model weights or drop your own in model/.
+Grab the pretrained weights (YOLO-v11x)
+https://drive.google.com/uc?id=1Vx2k4-YOUR-FILE-ID
+and place the file at the repo root as yolo11x.pt (or change the path in training.ipynb / evaluationscript.ipynb).
 
 Download the ready-made synthetic-error pack
 https://drive.google.com/drive/folders/1pf7hHusFz4UE9Hy-Bq3tJPSSD9CxdEdF
 → unzip into RADAR/Error Dataset/.
 
-Open only evaluationscript.ipynb and run all cells.
+Open evaluationscript.ipynb and Run All. That’s it — you’ll reproduce the evaluation without any training.
+
+yaml
+Copy
+Edit
+---
