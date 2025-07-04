@@ -54,6 +54,7 @@ https://drive.google.com/drive/folders/1pf7hHusFz4UE9Hy-Bq3tJPSSD9CxdEdF?usp=sha
 
 ## Folder Structure
 
+```text
 RADAR/
 ├── README.md
 ├── requirements.txt
@@ -94,9 +95,7 @@ jupyter lab                                # launch from repo root
 #   3. errordatasetcreation.ipynb
 #   4. evaluationscript.ipynb
 ⚡ Quick-evaluate (skip heavy steps)
-bash
-Copy
-Edit
+
 git clone https://github.com/adhrithv/RADAR.git
 cd RADAR
 pip install -r requirements.txt
