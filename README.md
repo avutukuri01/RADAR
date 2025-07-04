@@ -54,9 +54,63 @@ https://drive.google.com/drive/folders/1pf7hHusFz4UE9Hy-Bq3tJPSSD9CxdEdF?usp=sha
 
 ## Folder Structure
 
-- `model` - Download YOLO model weights
-- `preprocessing.ipynb` – Create training, validation, and testing sets for YOLO
-- `errordatasetcreation.ipynb` – Script to create simulated perceptual error dataset
-- `evaluationscript.ipynb` - Script to evaluate RADAR's ability to correct simulated perceptual error
-- `adm.py` - Final script for abnormality detection module (ADM)
-- `ddm.py` - Final script for differential detection module (DDM)
+RADAR/
+├── README.md
+├── requirements.txt
+│
+├── preprocessing.ipynb # ① build train/val/test + PNGs
+├── training.ipynb # ② train YOLO-v11x (skip if using pretrained model)
+├── errordatasetcreation.ipynb # ③ simulate visual-miss dataset
+├── evaluationscript.ipynb # ④ evaluate RADAR on the miss set
+│
+├── adm.py # Abnormality-Detection module
+└── ddm.py # Differential-Detection module
+
+markdown
+Copy
+Edit
+
+*What appears automatically after you run the notebooks*
+
+| Notebook | Auto-generated folders / files |
+|----------|--------------------------------|
+| `preprocessing.ipynb` | `images/`, `YOLODataset/train/…`, `YOLODataset/val/…`, `Testing1024/`, `training.csv`, `validation.csv`, `testing.csv`, `preprocessed_1024.csv` |
+| `training.ipynb` | `runs/train/YOLOExperiment/…` |
+| `errordatasetcreation.ipynb` | `Error Dataset/images/`, `visual_misses.csv`, `radiologist_annotations.csv` |
+
+
+## Usage
+
+### ▶️ Full pipeline (reproduce everything)
+
+```bash
+git clone https://github.com/adhrithv/RADAR.git
+cd RADAR
+pip install -r requirements.txt            # or use conda
+
+# 1) download VinDr-CXR from Kaggle and unzip so you have:
+#    RADAR/vinbigdata-chest-xray-abnormalities-detection/train/*.dicom
+
+jupyter lab                                 # launch from repo root
+Run the notebooks in this order
+
+preprocessing.ipynb
+
+training.ipynb (skip if you use pretrained model)
+
+errordatasetcreation.ipynb
+
+evaluationscript.ipynb
+
+⚡ Quick-evaluate (skip heavy steps)
+
+git clone https://github.com/adhrithv/RADAR.git
+cd RADAR
+pip install -r requirements.txt
+Keep the provided model weights or drop your own in model/.
+
+Download the ready-made synthetic-error pack
+https://drive.google.com/drive/folders/1pf7hHusFz4UE9Hy-Bq3tJPSSD9CxdEdF
+→ unzip into RADAR/Error Dataset/.
+
+Open only evaluationscript.ipynb and run all cells.
