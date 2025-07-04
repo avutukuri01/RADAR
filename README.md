@@ -66,6 +66,7 @@ RADAR/
 │
 ├── adm.py                       # Abnormality-Detection module
 └── ddm.py                       # Differential-Detection module
+```
 
 Files & folders created automatically by the notebooks
 
@@ -74,39 +75,39 @@ preprocessing.ipynb	images/, YOLODataset/train/…, YOLODataset/val/…, Testing
 training.ipynb	runs/train/YOLOExperiment/…
 errordatasetcreation.ipynb	Error Dataset/images/, visual_misses.csv, radiologist_annotations.csv
 
----
-
 ## Usage
-
-### ▶️ Full pipeline (reproduce everything)
-
+# ▶️ Full pipeline (reproduce everything)
 ```bash
+Copy
+Edit
 git clone https://github.com/adhrithv/RADAR.git
 cd RADAR
-pip install -r requirements.txt            # or use conda
+pip install -r requirements.txt           # or use conda
+
 
 # 1) download VinDr-CXR from Kaggle and unzip so you have:
 #    RADAR/vinbigdata-chest-xray-abnormalities-detection/train/*.dicom
 
-jupyter lab                                # launch from repo root
+jupyter lab                               # launch from repo root
 # Then run the notebooks in this order:
 #   1. preprocessing.ipynb
-#   2. training.ipynb         (skip if you use pretrained weights)
+#   2. training.ipynb      (skip if you use pretrained weights)
 #   3. errordatasetcreation.ipynb
 #   4. evaluationscript.ipynb
-⚡ Quick-evaluate (skip heavy steps)
+```
 
+# ⚡ Quick-evaluate (skip heavy steps)
+```bash
 git clone https://github.com/adhrithv/RADAR.git
 cd RADAR
 pip install -r requirements.txt
-Grab the pretrained weights (YOLO-v11x)
+```
+Download pretrained weights (YOLO-v11x)
 https://drive.google.com/uc?id=1Vx2k4-YOUR-FILE-ID
-and place the file at the repo root as yolo11x.pt (or change the path in training.ipynb / evaluationscript.ipynb).
+→ save as yolo11x.pt in the repo root (or update the path in the notebooks).
 
-Download the ready-made synthetic-error pack
+Download the synthetic-error pack
 https://drive.google.com/drive/folders/1pf7hHusFz4UE9Hy-Bq3tJPSSD9CxdEdF
 → unzip into RADAR/Error Dataset/.
 
-Open evaluationscript.ipynb and Run All. That’s it — you’ll reproduce the evaluation without any training.
-
----
+Open evaluationscript.ipynb and Run All—no training required.
