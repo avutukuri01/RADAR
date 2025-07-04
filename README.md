@@ -70,13 +70,14 @@ RADAR/
 
 Files & folders created automatically by the notebooks
 
-Notebook	Auto-generated folders / files
-preprocessing.ipynb	images/, YOLODataset/train/…, YOLODataset/val/…, Testing1024/, training.csv, validation.csv, testing.csv, preprocessed_1024.csv
-training.ipynb	runs/train/YOLOExperiment/…
-errordatasetcreation.ipynb	Error Dataset/images/, visual_misses.csv, radiologist_annotations.csv
+| Notebook                     | Auto-generated folders / files                                                                                           |
+|------------------------------|---------------------------------------------------------------------------------------------------------------------------|
+| `preprocessing.ipynb`        | `images/`, `YOLODataset/train/…`, `YOLODataset/val/…`, `Testing1024/`, `training.csv`, `validation.csv`, `testing.csv`, `preprocessed_1024.csv` |
+| `training.ipynb`             | `runs/train/YOLOExperiment/…`                                                                                            |
+| `errordatasetcreation.ipynb` | `Error Dataset/images/`, `visual_misses.csv`, `radiologist_annotations.csv`                                              |
 
 ## Usage
-# ▶️ Full pipeline (reproduce everything)
+### ▶️ Full pipeline (reproduce everything)
 ```bash
 Copy
 Edit
@@ -96,7 +97,7 @@ jupyter lab                               # launch from repo root
 #   4. evaluationscript.ipynb
 ```
 
-# ⚡ Quick-evaluate (skip heavy steps)
+### ⚡ Quick-evaluate (skip heavy steps)
 ```bash
 git clone https://github.com/adhrithv/RADAR.git
 cd RADAR
