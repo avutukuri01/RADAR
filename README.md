@@ -54,7 +54,6 @@ https://drive.google.com/drive/folders/1pf7hHusFz4UE9Hy-Bq3tJPSSD9CxdEdF?usp=sha
 
 ## Folder Structure
 
-```text
 RADAR/
 ├── README.md
 ├── requirements.txt
@@ -76,7 +75,6 @@ errordatasetcreation.ipynb	Error Dataset/images/, visual_misses.csv, radiologist
 
 ---
 
-```markdown
 ## Usage
 
 ### ▶️ Full pipeline (reproduce everything)
