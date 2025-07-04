@@ -66,16 +66,13 @@ RADAR/
 │
 ├── adm.py                       # Abnormality-Detection module
 └── ddm.py                       # Differential-Detection module
+
 Files & folders created automatically by the notebooks
 
 Notebook	Auto-generated folders / files
 preprocessing.ipynb	images/, YOLODataset/train/…, YOLODataset/val/…, Testing1024/, training.csv, validation.csv, testing.csv, preprocessed_1024.csv
 training.ipynb	runs/train/YOLOExperiment/…
 errordatasetcreation.ipynb	Error Dataset/images/, visual_misses.csv, radiologist_annotations.csv
-
-yaml
-Copy
-Edit
 
 ---
 
@@ -115,7 +112,4 @@ https://drive.google.com/drive/folders/1pf7hHusFz4UE9Hy-Bq3tJPSSD9CxdEdF
 
 Open evaluationscript.ipynb and Run All. That’s it — you’ll reproduce the evaluation without any training.
 
-yaml
-Copy
-Edit
 ---
