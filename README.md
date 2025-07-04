@@ -66,10 +66,6 @@ RADAR/
 ├── adm.py # Abnormality-Detection module
 └── ddm.py # Differential-Detection module
 
-markdown
-Copy
-Edit
-
 *What appears automatically after you run the notebooks*
 
 | Notebook | Auto-generated folders / files |
