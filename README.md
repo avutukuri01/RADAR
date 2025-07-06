@@ -104,7 +104,7 @@ cd RADAR
 pip install -r requirements.txt
 ```
 Download pretrained weights (YOLO-v11x)
-https://drive.google.com/uc?id=1Vx2k4-YOUR-FILE-ID
+https://drive.google.com/file/d/1FKhAvw2mS-C_eklsaLYqmhVpEhcHV_Cx
 → save as yolo11x.pt in the repo root (or update the path in the notebooks).
 
 Download the synthetic-error pack
