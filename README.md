@@ -59,13 +59,17 @@ RADAR/
 ├── README.md
 ├── requirements.txt
 │
-├── preprocessing.ipynb          # ① build train/val/test + PNGs
-├── training.ipynb               # ② train YOLO-v11x (skip if using pretrained weights)
-├── errordatasetcreation.ipynb   # ③ simulate visual-miss dataset
-├── evaluationscript.ipynb       # ④ evaluate RADAR on the miss set
+├── preprocessing.ipynb           # ① build train/val/test + PNGs
+├── training.ipynb                # ② train YOLO-v11x (skip if using pretrained weights)
+├── errordatasetcreation.ipynb    # ③ simulate visual-miss dataset
+├── evaluationscript.ipynb        # ④ evaluate RADAR on the miss set
 │
-├── adm.py                       # Abnormality-Detection module
-└── ddm.py                       # Differential-Detection module
+├── adm.py                        # Abnormality-Detection module
+├── ddm.py                        # Differential-Detection module
+│
+└── Web_Application/
+    ├── RADARflaskbackend.py      # Flask backend for RADAR web app
+    └── web_application_frontend/ # Frontend files for the web app
 ```
 
 Files & folders created automatically by the notebooks
