@@ -1,4 +1,3 @@
-
 # RADAR (Radiologist-AI Diagnostic Assistance and Review)
 
 ## Abstract
@@ -81,38 +80,75 @@ Files & folders created automatically by the notebooks
 | `errordatasetcreation.ipynb` | `Error Dataset/images/`, `visual_misses.csv`, `radiologist_annotations.csv`                                              |
 
 ## Usage
-### ▶️ Full pipeline (reproduce everything)
-```bash
-Copy
-Edit
-git clone https://github.com/adhrithv/RADAR.git
-cd RADAR
-pip install -r requirements.txt           # or use conda
 
+### ▶️ Full Pipeline (Reproduce Everything)
 
-# 1) download VinDr-CXR from Kaggle and unzip so you have:
-#    RADAR/vinbigdata-chest-xray-abnormalities-detection/train/*.dicom
-
-jupyter lab                               # launch from repo root
-# Then run the notebooks in this order:
-#   1. preprocessing.ipynb
-#   2. training.ipynb      (skip if you use pretrained weights)
-#   3. errordatasetcreation.ipynb
-#   4. evaluationscript.ipynb
-```
-
-### ⚡ Quick-evaluate (skip heavy steps)
 ```bash
 git clone https://github.com/adhrithv/RADAR.git
 cd RADAR
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
-Download pretrained weights (YOLO-v11x)
-https://drive.google.com/file/d/1FKhAvw2mS-C_eklsaLYqmhVpEhcHV_Cx
-→ save as yolo11x.pt in the repo root (or update the path in the notebooks).
 
-Download the synthetic-error pack
-https://drive.google.com/drive/folders/1pf7hHusFz4UE9Hy-Bq3tJPSSD9CxdEdF
-→ unzip into RADAR/Error Dataset/.
+**1. Download VinDr-CXR from Kaggle and unzip so you have:**
+```
+RADAR/vinbigdata-chest-xray-abnormalities-detection/train/*.dicom
+RADAR/vinbigdata-chest-xray-abnormalities-detection/annotations.csv
+```
 
-Open evaluationscript.ipynb and Run All—no training required.
+**2. Run the notebooks in order:**
+
+- **Step 1:** Preprocessing  
+  Open `preprocessing.ipynb` in Jupyter Lab/Notebook and run all cells.  
+  _Outputs:_ Preprocessed images and CSVs for training, validation, and testing.
+
+- **Step 2:** Training  
+  Open `training.ipynb` and run all cells.  
+  _Inputs:_ Preprocessed data from Step 1.  
+  _Outputs:_ Trained YOLO model weights and logs.
+
+- **Step 3:** Error Dataset Creation  
+  Open `errordatasetcreation.ipynb` and run all cells.  
+  _Inputs:_ Preprocessed CSVs from Step 1.  
+  _Outputs:_ `visual_misses.csv` and `remaining_annotations.csv`.
+
+- **Step 4:** Evaluation  
+  Open `evaluationscript.ipynb` and run all cells.  
+  _Inputs:_ Trained model weights from Step 2, error dataset from Step 3.  
+  _Outputs:_ Evaluation metrics, confusion matrix, and plots.
+
+
+### ⚡ Quick-Evaluate (Skip Heavy Steps)
+
+```bash
+git clone https://github.com/adhrithv/RADAR.git
+cd RADAR
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+**Download pretrained weights and synthetic error pack:**
+
+- [YOLO-v11x pretrained weights](https://drive.google.com/file/d/1FKhAvw2mS-C_eklsaLYqmhVpEhcHV_Cx)  
+  Save as `model.pt` in the repo root.
+
+- [Synthetic error dataset](https://drive.google.com/drive/folders/1pf7hHusFz4UE9Hy-Bq3tJPSSD9CxdEdF)  
+  Unzip into `RADAR/Error Dataset/`.
+
+**Run only the evaluation notebook:**
+
+- Open `evaluationscript.ipynb` and run all cells.
+
+---
+
+### 🖥️ Web Application
+
+See the [Web Application section above](#web-application) for instructions on running the Flask backend and frontend.
+
+---
+
+**Troubleshooting:**
+- If a notebook fails due to missing files, check that you have run all previous notebooks in order and that all required files are present.
+- For any package errors, ensure your environment is activated and run `pip install -r requirements.txt`.
