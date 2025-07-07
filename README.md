@@ -41,7 +41,54 @@ https://drive.google.com/drive/folders/1990-n_1OiC9Wb-PXwQFLdsdQ_Hb5XbBk?usp=dri
 
 https://www.notion.so/RADAR-Radiologist-AI-Diagnostic-Assistance-and-Review-215ca80949e980c3bb79e1984955eba1?source=copy_link
 
-------------------------------------------------------------------------
+---
+
+### Running the Web Application Locally
+
+You can run the RADAR web application locally by following these steps:
+
+#### 1. Start the Flask Backend
+
+```bash
+cd Web\ Application
+python RADARflaskbackend.py
+```
+By default, the Flask app will run on `http://127.0.0.1:5000`.
+
+#### 2. Expose the Backend with ngrok
+
+- [Sign up for a free ngrok account](https://ngrok.com/) and install ngrok on your system.
+- Authenticate ngrok with your token (see ngrok docs).
+- In a new terminal, run:
+
+```bash
+ngrok http 5000
+```
+- Copy the HTTPS forwarding URL provided by ngrok (e.g., `https://xxxxxx.ngrok.io`).
+
+#### 3. Update the Frontend BASE_URL
+
+- Open `Web Application/web_application_frontend/src/App.tsx`.
+- Find the line with `const BASE_URL = ...` and replace its value with your ngrok HTTPS URL, e.g.:
+  ```js
+  const BASE_URL = "https://xxxxxx.ngrok.io";
+  ```
+
+#### 4. Start the Frontend
+
+```bash
+cd Web\ Application/web_application_frontend
+npm install
+npm run dev
+```
+- The frontend will be available at `http://localhost:5173` (or the port shown in your terminal).
+
+#### 5. Use the App
+
+- Open your browser to the frontend URL.
+- The frontend will communicate with your Flask backend via the ngrok URL you set in `BASE_URL`.
+
+---
 
 ## Synthetic Error Dataset
 
@@ -94,7 +141,7 @@ pip install -r requirements.txt
 **1. Download VinDr-CXR from Kaggle and unzip so you have:**
 ```
 RADAR/vinbigdata-chest-xray-abnormalities-detection/train/*.dicom
-RADAR/vinbigdata-chest-xray-abnormalities-detection/annotations.csv
+RADAR/vinbigdata-chest-xray-abnormalities-detection/train.csv
 ```
 
 **2. Run the notebooks in order:**
