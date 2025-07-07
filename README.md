@@ -43,7 +43,15 @@ https://www.notion.so/RADAR-Radiologist-AI-Diagnostic-Assistance-and-Review-215c
 
 ---
 
-### Running the Web Application Locally
+## Running the Web Application Locally
+
+First, clone the repository and install backend dependencies if you haven't already:
+
+```bash
+git clone https://github.com/adhrithv/RADAR.git
+cd RADAR
+pip install -r requirements.txt
+```
 
 You can run the RADAR web application locally by following these steps:
 
